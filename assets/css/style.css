@@ -6,6 +6,14 @@ body {
     padding: 0;
 }
 
+body {
+    visibility: hidden;
+}
+body.loaded {
+    visibility: visible;
+    transition: visibility 0s linear 0s;
+}
+
 .topbar {
     position: fixed;
     top: 0;
@@ -245,7 +253,7 @@ a:active {
 }
 
 .parallax-divider {
-    height: 400px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -255,4 +263,3 @@ a:active {
     margin-left: calc(-50vw + 50%);
     display: block;
 }
-

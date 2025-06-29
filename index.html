@@ -72,7 +72,7 @@
             <li><span>Vroča čokolada s smetano</span><span>3,70€</span></li>
         </ul>
     </section>
-    <section class="parallax-divider" style="background-image: url('assets/img/kava.jpg');"></section>
+    <section class="full-width-divider" style="background-image: url('assets/img/kava.jpg');"></section>
     <section id="caji" class="menu-section">
         <h2>Čaji</h2>
         <ul>
@@ -252,6 +252,20 @@
 </section>
 
 <script>
+    window.addEventListener("load", function () {
+        document.body.classList.add("loaded");
+    });
+
+    window.addEventListener('scroll', function () {
+        const elements = document.querySelectorAll('.parallax-image');
+            elements.forEach(el => {
+            const speed = 0.4; // prilagodi hitrost
+            const offset = window.scrollY;
+            el.style.transform = `translateY(${offset * speed}px)`;
+        });
+    });
+
+
     function openNav() { document.getElementById("sidebar").style.width = "250px"; }
     function closeNav() { document.getElementById("sidebar").style.width = "0"; }
 </script>
